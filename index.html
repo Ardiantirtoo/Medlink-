@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Medlink+ - Layanan Kesehatan Online</title>
+<link href="styles.css" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/></head>
+<body>
+<header>
+<div class="container">
+<h1>Medlink+</h1>
+<nav>
+<ul>
+<li><a href="#home"><i class="fas fa-home"></i> Home</a></li>
+<li><a href="#services"><i class="fas fa-briefcase"></i> Layanan</a></li>
+<li><a href="#about"><i class="fas fa-info-circle"></i> Tentang Kami</a></li>
+<li><a href="#auth" onclick="showAuth()"><i class="fas fa-user"></i> Login/Daftar</a></li>
+<li><a href="#contact"><i class="fas fa-envelope"></i> Kontak</a></li>
+</ul>
+</nav>
+</div>
+</header>
+<section class="hero" id="home">
+<div class="container">
+<h2>Selamat Datang di Medlink+</h2>
+<p>Layanan kesehatan online terpercaya dari Tirto Pharma.</p>
+</div>
+</section>
+<section class="services" id="services">
+<div class="container">
+<h2>Layanan Kami</h2>
+<div class="service-cards">
+<div class="card"><i class="fas fa-user-md" style="font-size:2rem; color:#ffdd57; margin-bottom:10px;"></i>
+<h3>Konsultasi Online</h3>
+<p>Konsultasikan kesehatan Anda dengan dokter kami secara online.</p>
+<button class="btn" onclick="showConsultationForm()">Mulai Konsultasi</button>
+</div>
+<div class="card"><i class="fas fa-pills" style="font-size:2rem; color:#ffdd57; margin-bottom:10px;"></i>
+<h3>Pembelian Obat Umum</h3>
+<p>Beli obat tanpa resep dengan mudah dan cepat.</p>
+<button class="btn" onclick="showGeneralOrderForm()">Beli Obat</button>
+</div>
+<div class="card"><i class="fas fa-prescription-bottle" style="font-size:2rem; color:#ffdd57; margin-bottom:10px;"></i>
+<h3>Pembelian Obat Resep</h3>
+<p>Unggah resep Anda dan dapatkan obat sesuai kebutuhan.</p>
+<button class="btn" onclick="showPrescriptionForm()">Unggah Resep</button>
+</div>
+<div class="card"><i class="fas fa-search" style="font-size:2rem; color:#ffdd57; margin-bottom:10px;"></i>
+<h3>Informasi Obat</h3>
+<p>Cari tahu informasi obat dengan mudah melalui fitur pencarian kami.</p>
+<button class="btn" onclick="showMedicineInfo()">Cari Obat</button>
+</div>
+</div>
+</div>
+</section>
+<section class="hidden" id="consultation">
+<div class="container">
+<h2>Isi Terlebih Dahulu</h2>
+<form id="consultationForm">
+<label for="consultName">Nama:</label>
+<input id="consultName" required="" type="text"/>
+<label for="consultIssue">Keluhan:</label>
+<textarea id="consultIssue" required="" rows="4"></textarea>
+<button type="submit">Kirim</button>
+</form>
+<p id="consultationMessage"></p>
+</div>
+<!-- Bagian Konsultasi Online -->
+<section id="consultation" class="chat-container hidden">
+    <div class="chat-box">
+        <!-- Judul Konsultasi Online -->
+        <h2>Konsultasi Online</h2> 
+        
+        <!-- Area chat tempat pesan ditampilkan -->
+        <div id="chatHistory" class="chat-history">
+            <!-- Pesan akan muncul di sini -->
+        </div>
+        
+        <!-- Input chat dari pengguna -->
+        <div class="chat-input">
+            <input id="userMessage" type="text" placeholder="Tanyakan sesuatu kepada dokter..." />
+            <button onclick="sendMessage()">Kirim</button>
+        </div>
+    </div>
+</section>
+
+</section>
+<section class="hidden" id="generalOrder">
+<div class="container">
+<h2>Pembelian Obat Umum</h2>
+<form id="generalOrderForm">
+<label for="generalName">Nama Obat:</label>
+<input id="generalName" required="" type="text"/>
+<label for="generalQuantity">Jumlah:</label>
+<input id="generalQuantity" required="" type="number"/>
+<label for="generalComplaint">Keluhan:</label>
+<textarea id="generalComplaint" required="" rows="4"></textarea>
+<button type="submit">Pesan</button>
+</form>
+<p id="generalOrderMessage"></p>
+</div>
+</section>
+<section class="hidden" id="prescription">
+<div class="container">
+<h2>Pembelian Obat Resep</h2>
+<form id="prescriptionForm">
+<label for="prescriptionFile">Unggah Resep:</label>
+<input accept=".jpg, .jpeg, .png, .pdf" id="prescriptionFile" required="" type="file"/>
+<label for="prescriptionComplaint">Keluhan:</label>
+<textarea id="prescriptionComplaint" required="" rows="4"></textarea>
+<button type="submit">Unggah</button>
+</form>
+<p id="prescriptionMessage"></p>
+</div>
+</section>
+<section class="hidden" id="medicineInfo">
+<div class="container">
+<h2>Informasi Obat</h2>
+<label for="medicineSearch">Cari Nama Obat:</label>
+<input id="medicineSearch" placeholder="Contoh: Paracetamol" type="text"/>
+<button onclick="searchMedicine()">Cari</button>
+<div id="medicineResult"></div>
+</div>
+</section>
+<section class="hidden" id="about">
+<div class="container">
+<h2>Tentang Kami</h2>
+<p><strong>Tirto Pharma:</strong>
+<p>Apotek Tirto Pharma merupakan jaringan apotek modern yang didirikan pada tahun 2027. Dengan komitmen untuk meningkatkan akses kesehatan masyarakat Indonesia, kami kini telah berkembang pesat dengan 111 cabang yang tersebar di seluruh penjuru nusantara. Tirto Pharma hadir untuk menyediakan layanan kesehatan yang terpercaya, ramah, dan mudah diakses bagi semua lapisan masyarakat.
+
+                Kami menawarkan berbagai produk kesehatan, mulai dari obat-obatan generik, obat resep, hingga suplemen kesehatan dan alat medis. Dengan dukungan tenaga apoteker berpengalaman, kami memastikan setiap produk yang kami sediakan berkualitas tinggi dan aman digunakan. Selain itu, Tirto Pharma juga menjadi mitra kesehatan masyarakat dalam memberikan informasi obat secara akurat dan edukatif.
+                
+                Keberadaan kami tak hanya menjadi tempat pembelian obat, tetapi juga pusat edukasi dan solusi kesehatan. Dengan semangat melayani, kami terus berinovasi untuk menghadirkan layanan terbaik, baik di apotek fisik maupun platform digital.</p>
+<p><strong>Medlink+:</strong></p>
+<p>Medlink+ adalah layanan kesehatan online yang dirancang untuk memenuhi kebutuhan masyarakat modern yang serba cepat dan praktis. Melalui platform ini, kami menyediakan tiga layanan utama:</p>
+<p><strong>1. Pemesanan Obat Umum dan Resep Dokter</strong></p>
+<p>Medlink+ memudahkan Anda untuk memesan obat-obatan tanpa harus datang ke apotek. Anda dapat membeli obat umum maupun mengunggah resep dokter secara online. Tim kami akan memastikan keaslian resep dan obat, serta memberikan pengiriman cepat ke lokasi Anda.</p>
+<p><strong>2. Konsultasi Online dengan Ahli Kesehatan</strong></p>
+<p>Kami menyediakan layanan konsultasi online dengan apoteker dan tenaga kesehatan profesional. Anda dapat dengan mudah berkonsultasi mengenai penggunaan obat, efek samping, atau masalah kesehatan lainnya tanpa harus meninggalkan rumah.</p>
+<p><strong>3. Sistem Informasi Obat</strong></p>
+<p>Fitur ini membantu Anda mencari informasi lengkap mengenai berbagai jenis obat, mulai dari kegunaan, cara penggunaan, hingga efek samping yang mungkin terjadi. Informasi yang kami sajikan berbasis bukti dan diperbarui secara berkala untuk memastikan keakuratan.</p>
+<p>Dengan Medlink+, kami berkomitmen untuk menjadikan akses kesehatan lebih inklusif, efisien, dan terjangkau bagi seluruh masyarakat Indonesia. Kami hadir sebagai mitra kesehatan digital yang dapat Anda andalkan kapan saja dan di mana saja.</p>
+</p></div>
+</section>
+<section class="hidden" id="contact">
+<div class="container">
+<h2>Kontak Kami</h2>
+<p>Hubungi kami untuk informasi lebih lanjut:</p>
+<p><strong>Nama:</strong> Ardian Tirto</p>
+<p><strong>Nomor Telepon:</strong> <a href="https://wa.me/6287739778993" target="_blank">0877-3977-8993</a></p>
+<p><strong>Email:</strong> <a href="mailto:ardiantirto07@gmail.com">ardiantirto07@gmail.com</a></p>
+<button class="btn" onclick="location.href='https://wa.me/6287739778993'">Hubungi via WhatsApp</button>
+<button class="btn" onclick="location.href='mailto:ardiantirto07@gmail.com'">Hubungi via Email</button>
+</div>
+</section>
+
+<section id="auth" class="hidden">
+    <div class="container">
+        <h2>Login</h2>
+        <form id="loginForm">
+            <label for="username">Username:</label>
+            <input id="username" type="text" required>
+            <label for="password">Password:</label>
+            <input id="password" type="password" required>
+            <button type="submit">Login</button>
+        </form>
+        <p id="loginMessage"></p>
+        <hr>
+        <h2>Daftar</h2>
+        <form id="registerForm">
+            <label for="regName">Nama:</label>
+            <input id="regName" type="text" required>
+            <label for="regDOB">Tempat Tanggal Lahir:</label>
+            <input id="regDOB" type="text" required>
+            <label for="regWeight">Berat Badan Saat Ini (kg):</label>
+            <input id="regWeight" type="number" required>
+            <label for="regHeight">Tinggi Badan Saat Ini (cm):</label>
+            <input id="regHeight" type="number" required>
+            <label for="regPhone">Nomor Handphone (WhatsApp):</label>
+            <input id="regPhone" type="text" required>
+            <button type="submit">Daftar</button>
+        </form>
+        <p id="registerMessage"></p>
+    </div>
+</section>
+
+<footer>
+<div class="container">
+<p>© 2024 Medlink+. Semua Hak Dilindungi.Dibuat Oleh : Ardian Tirto</p>
+</div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>

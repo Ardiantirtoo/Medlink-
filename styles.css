@@ -1,0 +1,821 @@
+/* Global Styles */
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; /* Mengatur jenis font */
+    margin: 0; /* Menghapus margin default */
+    padding: 0; /* Menghapus padding default */
+    line-height: 1.6; /* Menetapkan jarak antar baris teks */
+    background: #1e2022; /* Mengatur latar belakang halaman menjadi abu-abu gelap */
+    color: #eaeaea; /* Mengubah warna teks menjadi abu-abu terang */
+}
+
+header {
+    background: #1e2022; /* Latar belakang header gelap */
+    color: #f6c700; /* Warna teks header menjadi kuning cerah */
+    padding: 10px 0; /* Padding vertikal 10px */
+}
+
+header h1 {
+    text-align: center; /* Menyusun teks di tengah */
+    margin: 0; /* Menghapus margin default */
+}
+
+header nav ul {
+    display: flex; /* Menggunakan Flexbox untuk menyusun item menu */
+    justify-content: center; /* Memusatkan item menu */
+    list-style: none; /* Menghapus bullet atau angka pada list */
+    margin: 0; /* Menghapus margin default */
+    padding: 0; /* Menghapus padding default */
+}
+
+header nav ul li {
+    margin: 0 15px; /* Memberikan jarak horizontal antara item menu */
+}
+
+header nav ul li a {
+    color: #fff; /* Mengubah warna teks link menjadi putih */
+    text-decoration: none; /* Menghapus garis bawah pada link */
+}
+
+/* Navigasi Header */
+header nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Pusatkan secara vertikal */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 20px; /* Beri jarak antar item */
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px; /* Menambah ruang pada tombol */
+    border: 2px solid transparent; /* Default tanpa border */
+    border-radius: 5px; /* Membulatkan sudut */
+    transition: all 0.3s ease; /* Efek transisi halus */
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Jarak ikon dan teks */
+}
+
+header nav ul li a:hover {
+    background: #f6c700; /* Warna latar saat hover */
+    color: #1e2022; /* Ubah warna teks */
+    border: 2px solid #f6c700; /* Berikan border kuning */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Tambahkan bayangan */
+    transform: scale(1.05); /* Perbesar sedikit */
+}
+
+header nav ul li a i {
+    font-size: 1.2rem; /* Ukuran ikon */
+}
+
+.hero {
+    text-align: center; /* Menyusun teks di tengah */
+    background: #25292e; /* Latar belakang abu-abu gelap */
+    color: #fff; /* Mengubah warna teks menjadi putih */
+    padding: 50px 20px; /* Memberikan padding vertikal 50px dan horizontal 20px */
+}
+
+.hero .btn {
+    background: #fff; /* Latar belakang tombol putih */
+    color: #25292e; /* Warna teks tombol gelap */
+    padding: 10px 20px; /* Memberikan ruang di sekitar teks tombol */
+    text-decoration: none; /* Menghapus garis bawah pada link (jika tombol adalah link) */
+    border-radius: 5px; /* Membulatkan sudut tombol */
+}
+
+.services .container {
+    display: flex; /* Menggunakan Flexbox untuk layout */
+    grid-template-columns: 1fr 1fr; /* Properti grid yang tidak digunakan dengan flex */
+    gap: 20px; /* Memberikan jarak antar elemen */
+    flex-wrap: wrap; /* Membungkus elemen jika ruang tidak cukup */
+    justify-content: space-around; /* Menyusun elemen agar terpusat */
+    background: url(background_1.jpg) no-repeat; /* Menetapkan gambar latar belakang */
+    background-size: cover; /* Menyesuaikan gambar latar belakang agar menutupi seluruh area */
+    color: #fcfdff; /* Warna teks hampir putih */
+    text-shadow: 50px #0678eb; /* Menambahkan bayangan biru pada teks */
+}
+
+.services h2 {
+    font-size: 2.5rem; /* Ukuran font besar */
+    color: #ffffff; /* Warna teks putih */
+    text-align: center; /* Menyusun teks di tengah */
+    text-transform: uppercase; /* Mengubah teks menjadi huruf kapital */
+    text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5); /* Efek bayangan pada teks */
+    margin-bottom: 20px; /* Jarak bawah 20px */
+    border-bottom: 2px solid #ffffff; /* Garis bawah putih */
+    padding-bottom: 10px; /* Padding bawah untuk memberi ruang antara teks dan garis bawah */
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)); /* Gradien transparan */
+    padding: 10px; /* Padding di sekitar teks */
+    border-radius: 30px; /* Sudut membulat pada elemen */
+    display: inline-block; /* Ukuran elemen mengikuti panjang teks */
+}
+
+#services .service-cards {
+    display: flex; /* Menggunakan Flexbox untuk layout kartu */
+    flex-wrap: wrap; /* Membungkus elemen jika ruang tidak cukup */
+    justify-content: center; /* Menyusun kartu di tengah */
+    gap: 20px; /* Jarak antar kartu */
+}
+
+.service-cards .card {
+    background: #25292e; /* Latar belakang kartu abu-abu gelap */
+    margin: 10px; /* Jarak antara kartu */
+    padding: 20px; /* Ruang di dalam kartu */
+    border: 1px solid #555; /* Border abu-abu gelap pada kartu */
+    border-radius: 10px; /* Sudut membulat pada kartu */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Bayangan halus pada kartu */
+    width: 300px; /* Lebar tetap kartu */
+    max-width: 300px; /* Kartu tidak bisa lebih lebar dari 300px */
+    min-width: 300px; /* Kartu tidak bisa lebih sempit dari 300px */
+    text-align: center; /* Menyusun teks kartu di tengah */
+    color: #ffffff; /* Warna teks kartu putih */
+    flex-shrink: 0; /* Mencegah kartu mengecil saat ukuran layar berubah */
+}
+
+form input, form textarea, form button {
+    width: 100%; /* Lebar penuh untuk input, textarea, dan tombol */
+    margin-bottom: 15px; /* Jarak bawah antar elemen */
+    padding: 10px; /* Ruang di dalam elemen */
+    border: 1px solid #ddd; /* Border abu-abu terang */
+    border-radius: 5px; /* Sudut membulat pada elemen */
+}
+
+/* Styling Kontainer Form */
+form {
+    max-width: 500px; /* Batasi lebar maksimal form */
+    margin: 20px auto; /* Pusatkan form secara horizontal dan beri margin atas-bawah */
+    padding: 20px; /* Tambahkan ruang di sekitar form */
+    background: #25292e; /* Warna latar belakang form */
+    border-radius: 10px; /* Membuat sudut membulat */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Tambahkan bayangan */
+    color: #eaeaea; /* Warna teks */
+}
+
+/* Styling Input dan Textarea */
+form input, form textarea {
+    width: 95%; /* Lebar penuh */
+    padding: 10px; /* Ruang di dalam elemen */
+    margin-bottom: 15px; /* Jarak antar elemen */
+    border: 1px solid #555; /* Warna border */
+    border-radius: 5px; /* Sudut membulat */
+    background: #1e2022; /* Warna latar belakang input */
+    color: #eaeaea; /* Warna teks */
+    font-size: 1rem; /* Ukuran font */
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1); /* Efek bayangan dalam */
+}
+
+/* Efek Fokus pada Input dan Textarea */
+form input:focus, form textarea:focus {
+    border-color: #f6c700; /* Ubah warna border saat fokus */
+    outline: none; /* Hilangkan outline default */
+    box-shadow: 0 0 5px rgba(246, 199, 0, 0.5); /* Tambahkan bayangan kuning */
+}
+
+/* Styling Tombol */
+form button {
+    width: 100%; /* Lebar penuh */
+    padding: 10px; /* Ruang di dalam tombol */
+    background: #f6c700; /* Warna latar tombol */
+    color: #1e2022; /* Warna teks tombol */
+    border: none; /* Hilangkan border default */
+    border-radius: 5px; /* Sudut membulat */
+    font-size: 1rem; /* Ukuran font */
+    cursor: pointer; /* Ganti kursor menjadi pointer */
+    transition: all 0.3s ease; /* Animasi transisi */
+}
+
+/* Efek Hover pada Tombol */
+form button:hover {
+    background: #d4a900; /* Warna latar lebih gelap saat hover */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Tambahkan bayangan */
+}
+
+/* Efek Klik pada Tombol */
+form button:active {
+    background: #b38b00; /* Warna latar lebih gelap saat ditekan */
+    transform: scale(0.98); /* Sedikit mengecilkan tombol */
+}
+
+/* Styling Footer */
+footer {
+    text-align: center;
+    background: #1e2022;
+    color: #eaeaea;
+    padding: 10px 0;
+    font-size: 0.9rem;
+    margin-top: 20px; /* Jarak atas untuk memberi ruang */
+}
+
+footer {
+    text-align: center; /* Menyusun teks footer di tengah */
+    background: #333; /* Latar belakang footer gelap */
+    color: #fff; /* Warna teks putih */
+    padding: 10px; /* Padding di seluruh bagian footer */
+}
+
+/* Menggunakan Flexbox untuk menyembunyikan elemen */
+.hidden {
+    display: none; /* Ini adalah kesalahan, seharusnya 'display: none;' */
+}
+
+.hidden {
+    display: none; /* Menyembunyikan elemen */
+}
+
+#about p, #contact p {
+    line-height: 1.6; /* Menetapkan jarak antar baris teks pada paragraf */
+    text-align: justify;
+    margin: 20px;
+}
+
+a {
+    text-decoration: none; /* Menghapus garis bawah pada link */
+    color: #ffffff; /* Mengubah warna teks link menjadi putih */
+}
+
+a:hover {
+    text-decoration: underline; /* Menambahkan garis bawah saat link dihover */
+}
+
+/* Tombol di dalam card */
+.card .btn {
+    background-color: #ffffff; /* Latar belakang tombol putih */
+    color: #25292e; /* Warna teks tombol gelap */
+    padding: 12px 25px; /* Memberikan ruang di sekitar teks */
+    border: none; /* Menghilangkan border default */
+    border-radius: 30px; /* Sudut membulat pada tombol */
+    font-size: 1rem; /* Ukuran font standar */
+    cursor: pointer; /* Menampilkan pointer saat kursor di atas tombol */
+    text-align: center; /* Menyusun teks tombol di tengah */
+    transition: all 0.3s ease; /* Animasi transisi halus untuk semua perubahan */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Bayangan halus saat tombol normal */
+}
+
+/* Efek saat kursor di atas tombol */
+.card .btn:hover {
+    background-color: #f6c700; /* Latar belakang tombol berubah menjadi kuning cerah */
+    color: #fff; /* Mengubah warna teks tombol menjadi putih */
+    transform: translateY(-5px); /* Efek tombol terangkat */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Bayangan lebih dalam saat hover */
+}
+
+/* Efek saat tombol ditekan */
+.card .btn:active {
+    transform: translateY(2px); /* Efek tombol lebih dalam saat ditekan */
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15); /* Bayangan lebih kecil saat tombol ditekan */
+}
+
+/* Kontainer Pencarian */
+#medicineInfo {
+    max-width: 600px; /* Batas lebar maksimum */
+    margin: 20px auto; /* Pusatkan secara horizontal */
+    padding: 20px; /* Tambahkan ruang di sekitar */
+    background: #25292e; /* Warna latar belakang gelap */
+    border-radius: 10px; /* Membulatkan sudut */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Bayangan lembut */
+    color: #eaeaea; /* Warna teks */
+}
+
+/* Styling Label */
+#medicineInfo label {
+    display: block; /* Label berada di atas input */
+    margin-bottom: 10px; /* Jarak dengan input */
+    font-weight: bold; /* Tebalkan teks label */
+}
+
+/* Input Pencarian */
+#medicineInfo input[type="text"] {
+    width: 100%; /* Lebar penuh */
+    padding: 10px; /* Ruang di dalam input */
+    margin-bottom: 15px; /* Jarak bawah */
+    border: 1px solid #555; /* Warna border */
+    border-radius: 5px; /* Membulatkan sudut */
+    background: #1e2022; /* Warna latar belakang */
+    color: #eaeaea; /* Warna teks */
+    font-size: 1rem; /* Ukuran font */
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1); /* Efek bayangan dalam */
+}
+
+/* Efek Fokus Input */
+#medicineInfo input[type="text"]:focus {
+    border-color: #f6c700; /* Ubah warna border saat fokus */
+    outline: none; /* Hilangkan outline default */
+    box-shadow: 0 0 5px rgba(246, 199, 0, 0.5); /* Tambahkan bayangan kuning */
+}
+
+/* Tombol Cari */
+#medicineInfo button {
+    padding: 10px 20px; /* Ruang di dalam tombol */
+    background: #f6c700; /* Warna latar tombol */
+    color: #1e2022; /* Warna teks */
+    border: none; /* Hilangkan border */
+    border-radius: 5px; /* Membulatkan sudut */
+    font-size: 1rem; /* Ukuran font */
+    cursor: pointer; /* Tampilkan pointer saat hover */
+    transition: all 0.3s ease; /* Transisi halus */
+}
+
+/* Efek Hover pada Tombol */
+#medicineInfo button:hover {
+    background: #d4a900; /* Warna latar lebih gelap saat hover */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Tambahkan bayangan */
+}
+
+/* Efek Klik pada Tombol */
+#medicineInfo button:active {
+    background: #b38b00; /* Warna latar lebih gelap saat ditekan */
+    transform: scale(0.98); /* Sedikit mengecilkan tombol */
+}
+/* Kontainer Hasil Pencarian */
+#medicineResult {
+    margin-top: 20px; /* Beri jarak dengan input pencarian */
+    padding: 20px; /* Tambahkan ruang di sekitar hasil */
+    background: #25292e; /* Latar belakang gelap */
+    border-radius: 10px; /* Membulatkan sudut */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Tambahkan bayangan */
+    color: #eaeaea; /* Warna teks */
+    font-size: 1rem; /* Ukuran font standar */
+    line-height: 1.8; /* Jarak antar baris teks */
+}
+
+/* Styling Judul Obat */
+#medicineResult h3 {
+    font-size: 1.5rem; /* Ukuran font lebih besar */
+    color: #f6c700; /* Warna kuning cerah */
+    margin-bottom: 10px; /* Jarak bawah judul */
+    text-align: left; /* Selaraskan ke kiri */
+}
+
+/* Informasi Detail Obat */
+#medicineResult p {
+    margin: 5px 0; /* Jarak antar paragraf */
+}
+
+#medicineResult p span {
+    font-weight: bold; /* Tebalkan teks label */
+    color: #ffffff; /* Warna label lebih mencolok */
+}
+/* Kontainer Utama */
+#about {
+    max-width: 800px; /* Batas lebar maksimal */
+    margin: 20px auto; /* Pusatkan secara horizontal */
+    padding: 20px; /* Tambahkan ruang di sekitar konten */
+    background: #25292e; /* Latar belakang gelap */
+    border-radius: 10px; /* Membuat sudut membulat */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Bayangan lembut */
+    color: #eaeaea; /* Warna teks */
+    line-height: 1.8; /* Jarak antar baris teks */
+}
+
+/* Judul Utama */
+#about h2 {
+    font-size: 2rem; /* Ukuran font lebih besar */
+    color: #f6c700; /* Warna kuning cerah */
+    text-align: center; /* Selaraskan ke tengah */
+    margin-bottom: 20px; /* Jarak bawah */
+    text-transform: uppercase; /* Huruf kapital semua */
+    border-bottom: 2px solid #f6c700; /* Garis bawah kuning */
+    padding-bottom: 10px; /* Jarak antara teks dan garis bawah */
+}
+
+/* Subjudul */
+#about h3 {
+    font-size: 1.5rem; /* Ukuran font subjudul */
+    color: #ffffff; /* Warna teks putih */
+    margin-top: 20px; /* Jarak atas subjudul */
+    margin-bottom: 10px; /* Jarak bawah subjudul */
+}
+
+/* Paragraf */
+#about p {
+    margin-bottom: 15px; /* Jarak antar paragraf */
+    text-align: justify; /* Rata kanan dan kiri */
+    font-size: 1rem; /* Ukuran font standar */
+}
+
+/* List */
+#about ul {
+    list-style-type: disc; /* Tipe poin */
+    margin-left: 20px; /* Geser list ke kanan */
+}
+
+#about ul li {
+    margin-bottom: 10px; /* Jarak antar item */
+    line-height: 1.6; /* Jarak antar baris */
+}
+
+/* Efek Hover pada Link */
+#about a {
+    color: #f6c700; /* Warna link kuning */
+    text-decoration: underline; /* Garis bawah pada link */
+    transition: color 0.3s ease; /* Efek transisi halus */
+}
+
+#about a:hover {
+    color: #d4a900; /* Warna lebih gelap saat hover */
+}
+/* Kontainer Utama Kontak */
+#contact {
+    max-width: 500px; /* Batas lebar maksimal */
+    margin: 20px auto; /* Pusatkan secara horizontal */
+    padding: 20px; /* Ruang di sekitar konten */
+    background: #25292e; /* Latar belakang gelap */
+    border-radius: 10px; /* Membulatkan sudut */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Bayangan lembut */
+    color: #eaeaea; /* Warna teks */
+    font-size: 1rem; /* Ukuran font standar */
+    line-height: 1.8; /* Jarak antar baris teks */
+}
+
+/* Judul Kontak */
+#contact h2 {
+    font-size: 1.8rem; /* Ukuran font lebih besar */
+    color: #f6c700; /* Warna kuning cerah */
+    text-align: center; /* Selaraskan ke tengah */
+    margin-bottom: 20px; /* Jarak bawah */
+    text-transform: uppercase; /* Huruf kapital semua */
+    border-bottom: 2px solid #f6c700; /* Garis bawah kuning */
+    padding-bottom: 10px; /* Jarak antara teks dan garis bawah */
+}
+
+/* Informasi Kontak */
+#contact p {
+    margin-bottom: 10px; /* Jarak antar paragraf */
+    text-align: left; /* Rata kiri */
+}
+
+/* Link Kontak */
+#contact a {
+    color: #f6c700; /* Warna link kuning */
+    text-decoration: none; /* Hilangkan garis bawah */
+    font-weight: bold; /* Teks tebal */
+    transition: color 0.3s ease; /* Transisi halus */
+}
+
+#contact a:hover {
+    color: #d4a900; /* Warna lebih gelap saat hover */
+    text-decoration: underline; /* Tambahkan garis bawah */
+}
+
+/* Tombol */
+#contact .btn {
+    display: inline-block; /* Tampilkan sebagai tombol */
+    padding: 10px 20px; /* Ruang di dalam tombol */
+    margin: 10px 5px 0 0; /* Jarak antar tombol */
+    background: #f6c700; /* Latar belakang kuning */
+    color: #1e2022; /* Warna teks */
+    border: none; /* Hilangkan border */
+    border-radius: 5px; /* Membulatkan sudut */
+    font-size: 1rem; /* Ukuran font */
+    font-weight: bold; /* Tebalkan teks */
+    cursor: pointer; /* Tampilkan pointer saat hover */
+    transition: all 0.3s ease; /* Transisi halus */
+}
+
+/* Efek Hover Tombol */
+#contact .btn:hover {
+    background: #d4a900; /* Warna latar lebih gelap saat hover */
+    color: #fff; /* Teks berubah menjadi putih */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Tambahkan bayangan */
+}
+
+/* Efek Klik Tombol */
+#contact .btn:active {
+    background: #b38b00; /* Warna lebih gelap saat ditekan */
+    transform: scale(0.98); /* Sedikit mengecilkan tombol */
+}
+/* Styling Kontainer Utama */
+.hero {
+    text-align: center; /* Pusatkan konten */
+    padding: 60px 20px; /* Ruang vertikal besar dan horizontal kecil */
+    background: linear-gradient(180deg, #1e2022, #25292e); /* Gradien latar belakang */
+    color: #f6c700; /* Warna teks */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Tambahkan bayangan */
+}
+
+/* Judul Utama */
+.hero h1 {
+    font-size: 2.5rem; /* Ukuran font besar */
+    color: #f6c700; /* Warna kuning cerah */
+    text-transform: uppercase; /* Ubah teks menjadi huruf kapital semua */
+    letter-spacing: 2px; /* Jarak antar huruf */
+    margin-bottom: 15px; /* Jarak bawah judul */
+    font-family: 'Arial', sans-serif; /* Font modern */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Efek bayangan pada teks */
+}
+
+/* Subjudul */
+.hero p {
+    font-size: 1.2rem; /* Ukuran font subjudul */
+    color: #ffffff; /* Warna teks abu-abu terang */
+    margin: 0; /* Hilangkan margin default */
+    font-family: 'Arial', sans-serif; /* Konsistensi font */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3); /* Tambahkan bayangan pada teks */
+}
+
+/* Gambar atau Elemen Tambahan */
+.hero::after {
+    content: ''; /* Tambahkan elemen dekorasi */
+    display: block;
+    width: 100%;
+    height: 4px; /* Garis dekoratif */
+    background: #f6c700; /* Warna kuning */
+    margin-top: 20px; /* Jarak atas dengan teks */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2); /* Bayangan pada garis */
+}
+
+#auth .container {
+    background: #25292e;
+    color: #eaeaea;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+#auth form {
+    margin-bottom: 20px;
+}
+
+#auth label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: bold;
+}
+
+#auth input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background: #1e2022;
+    color: #eaeaea;
+}
+
+#auth button {
+    background: #f6c700;
+    color: #1e2022;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#auth button:hover {
+    background: #d4a900;
+    color: #fff;
+}
+
+.services h2 {
+    font-size: 2.5rem; /* Ukuran font besar */
+    color: #ffffff; /* Warna teks putih */
+    text-align: center; /* Menyusun teks di tengah */
+    text-transform: uppercase; /* Mengubah teks menjadi huruf kapital */
+    text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5); /* Efek bayangan pada teks */
+    margin-bottom: 20px; /* Jarak bawah 20px */
+    padding: 10px 20px; /* Memberikan ruang di sekitar teks */
+    display: inline-block; /* Mengatur ukuran elemen mengikuti panjang teks */
+    border-radius: 15px; /* Membuat sudut membulat */
+    background: rgba(0, 0, 0, 0.8); /* Latar belakang transparan gelap */
+    border: 2px solid #ffffff; /* Garis tepi putih */
+}
+.hero h2 {
+    font-size: 3rem; /* Ukuran teks lebih besar */
+    font-weight: bold; /* Teks tebal */
+    color: #f6c700; /* Warna kuning cerah */
+    text-align: center; /* Teks rata tengah */
+    text-transform: uppercase; /* Semua huruf kapital */
+    margin-bottom: 20px; /* Jarak bawah */
+    position: relative; /* Untuk efek garis bawah */
+    letter-spacing: 2px; /* Jarak antar huruf */
+}
+
+.hero h2::after {
+    content: ""; /* Elemen dekoratif */
+    display: block;
+    width: 100px; /* Panjang garis */
+    height: 4px; /* Ketebalan garis */
+    background: linear-gradient(to right, #f6c700, #d4a900); /* Gradasi warna */
+    margin: 10px auto 0 auto; /* Pusatkan garis */
+    border-radius: 5px; /* Membulatkan ujung garis */
+    animation: expand 2s infinite ease-in-out; /* Efek animasi */
+}
+
+@keyframes expand {
+    0%, 100% {
+        transform: scaleX(1); /* Ukuran normal */
+    }
+    50% {
+        transform: scaleX(1.5); /* Perluasan */
+    }
+}
+
+.hero p {
+    font-size: 1.2rem; /* Ukuran teks deskripsi */
+    font-weight: 300; /* Berat font lebih ringan */
+    color: #ffffff; /* Warna teks putih */
+    text-align: center; /* Teks rata tengah */
+    margin-top: 10px; /* Jarak atas */
+    line-height: 1.8; /* Jarak antar baris */
+    opacity: 0.9; /* Transparansi untuk estetika */
+}
+form button {
+    width: 100%; /* Pastikan tombol memiliki lebar penuh form */
+    padding: 10px; /* Ruang di dalam tombol */
+    background: #f6c700; /* Warna latar tombol */
+    color: #1e2022; /* Warna teks tombol */
+    border: none; /* Hilangkan border default */
+    border-radius: 5px; /* Membulatkan sudut tombol */
+    font-size: 1rem; /* Ukuran font */
+    font-weight: bold; /* Tebalkan teks */
+    cursor: pointer; /* Tampilkan pointer saat hover */
+    transition: all 0.3s ease; /* Transisi halus */
+    box-sizing: border-box; /* Pastikan padding dihitung dalam ukuran */
+}
+
+form button:hover {
+    background: #d4a900; /* Warna lebih gelap saat hover */
+    color: #fff; /* Ubah teks menjadi putih */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Tambahkan bayangan */
+}
+
+form button:active {
+    background: #b38b00; /* Warna lebih gelap saat ditekan */
+    transform: scale(0.98); /* Sedikit mengecilkan tombol */
+}
+form {
+    width: 100%; /* Lebar penuh form */
+    max-width: 400px; /* Batas maksimal lebar form */
+    margin: 0 auto; /* Form diposisikan di tengah */
+    padding: 20px; /* Tambahkan ruang di dalam form */
+}
+/* Desain Chat */
+.chat-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #25292e;
+    padding: 20px;
+    height: 100vh;
+}
+
+.chat-box {
+    background-color: #1e2022;
+    border-radius: 10px;
+    width: 400px;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.chat-history {
+    flex-grow: 1;
+    overflow-y: auto;
+    margin-bottom: 20px;
+    padding-right: 10px;
+}
+
+.chat-input {
+    display: flex;
+    gap: 10px;
+}
+
+.chat-input input {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background: #25292e;
+    color: #eaeaea;
+}
+
+.chat-input button {
+    background-color: #f6c700;
+    color: #25292e;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.chat-input button:hover {
+    background-color: #d4a900;
+}
+
+/* Pesan Pengguna */
+.user-message {
+    background-color: #ffdd57;
+    color: #1e2022;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    align-self: flex-end;
+    max-width: 80%;
+    word-wrap: break-word;
+}
+
+/* Pesan Dokter */
+.doctor-message {
+    background-color: #25292e;
+    color: #ffffff;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    align-self: flex-start;
+    max-width: 80%;
+    word-wrap: break-word;
+}
+/* Desain untuk Konsultasi Chat */
+.chat-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #25292e;
+    padding: 20px;
+    height: 100vh;
+}
+
+.chat-box {
+    background-color: #1e2022;
+    border-radius: 10px;
+    width: 400px;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.chat-box h2 {
+    color: #fff;
+    text-align: center;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.chat-history {
+    flex-grow: 1;
+    overflow-y: auto;
+    margin-bottom: 20px;
+    padding-right: 10px;
+    color: #fff;
+}
+
+.chat-input {
+    display: flex;
+    gap: 10px;
+}
+
+.chat-input input {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background: #25292e;
+    color: #eaeaea;
+}
+
+.chat-input button {
+    background-color: #f6c700;
+    color: #25292e;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.chat-input button:hover {
+    background-color: #d4a900;
+}
+
+/* Pesan Pengguna */
+.user-message {
+    background-color: #ffdd57;
+    color: #1e2022;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    align-self: flex-end;
+    max-width: 80%;
+    word-wrap: break-word;
+}
+
+/* Pesan Dokter */
+.doctor-message {
+    background-color: #25292e;
+    color: #ffffff;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    align-self: flex-start;
+    max-width: 80%;
+    word-wrap: break-word;
+}
