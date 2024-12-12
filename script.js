@@ -1252,7 +1252,7 @@ async function sendMessage() {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
-                "Authorization": `Bearer API KEY` // Ganti dengan API key Anda
+                "Authorization": `Bearer YOUR_API_KEY` // Ganti dengan API key Anda
             },
             body: JSON.stringify({
                 model: "gpt-3.5-turbo",
