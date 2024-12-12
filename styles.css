@@ -819,23 +819,3 @@ form {
     max-width: 80%;
     word-wrap: break-word;
 }
-header nav ul {
-    display: flex; /* Flexbox untuk item horizontal */
-    justify-content: flex-start; /* Item mulai dari kiri */
-    align-items: center; /* Pusatkan item secara vertikal */
-    overflow-x: auto; /* Aktifkan scroll horizontal */
-    white-space: nowrap; /* Hindari item terpotong ke baris berikutnya */
-    list-style: none; /* Hilangkan bullet */
-    margin: 0;
-    padding: 0;
-    gap: 20px; /* Jarak antar item */
-}
-
-header nav ul::-webkit-scrollbar {
-    height: 8px; /* Tinggi scrollbar */
-}
-
-header nav ul::-webkit-scrollbar-thumb {
-    background-color: #f6c700; /* Warna scrollbar */
-    border-radius: 10px; /* Membulatkan scrollbar */
-}
