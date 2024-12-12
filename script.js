@@ -1220,3 +1220,58 @@ function showConsultationChat() {
     hideAllSections(); // Sembunyikan semua bagian lain
     document.getElementById("consultation").classList.remove("hidden"); // Tampilkan chat
 }
+function hideAllSections() {
+    document.querySelectorAll('section').forEach(section => section.classList.add('hidden'));
+}
+
+function showAIChat() {
+    hideAllSections();
+    document.getElementById('aiChat').classList.remove('hidden');
+}
+
+async function sendMessage() {
+    // Ambil pesan dari input pengguna
+    const userMessage = document.getElementById('userMessage').value;
+
+    // Periksa jika input kosong
+    if (!userMessage.trim()) {
+        alert("Mohon masukkan pertanyaan sebelum mengirim.");
+        return;
+    }
+
+    // Tambahkan pesan pengguna ke riwayat chat
+    const chatHistory = document.getElementById('chatHistory');
+    chatHistory.innerHTML += `<div class="user-message">Anda: ${userMessage}</div>`;
+
+    // Kosongkan input setelah pesan dikirim
+    document.getElementById('userMessage').value = '';
+
+    try {
+        // Kirim permintaan ke API OpenAI
+        const response = await fetch("https://api.openai.com/v1/chat/completions", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+                "Authorization": `Bearer API KEY` // Ganti dengan API key Anda
+            },
+            body: JSON.stringify({
+                model: "gpt-3.5-turbo",
+                messages: [{ role: "user", content: userMessage }]
+            })
+        });
+
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+
+        const data = await response.json();
+        const aiMessage = data.choices[0].message.content;
+
+        // Tambahkan respons AI ke riwayat chat
+        chatHistory.innerHTML += `<div class="ai-message">Dito AI: ${aiMessage}</div>`;
+        chatHistory.scrollTop = chatHistory.scrollHeight; // Gulir otomatis ke bawah
+    } catch (error) {
+        console.error("Error saat mengirim pesan ke OpenAI:", error);
+        chatHistory.innerHTML += `<div class="error-message">DITO AI MASIH DALAM TAHAP DEVELOPMENT TUNGGU YA.</div>`;
+    }
+}
